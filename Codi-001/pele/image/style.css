@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code:wght@400;600&family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;    
+}
+
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg,#4046C0 0%, 21.114370226860046%, #A8BDDA 42.22874045372009%, 71.11437022686005%, #FFFFFF 100%);
+}
+
+.cabecalho{
+    
+}
