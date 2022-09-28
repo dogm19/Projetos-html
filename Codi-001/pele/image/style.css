@@ -124,15 +124,33 @@ body{
 }
 
 @media screen and (max-width: 600px){
-    body{
-        width: 100%;
-        height: auto;
-    }
     .cabecalho-logo-image{
         height: 50px;
     }
     .cabecalho-menu{
         display: flex;
         gap: 12px;
+    }
+    .conteudo-principal{
+        flex-direction: column;
+    }
+    .conteudo-principal-image{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .conteudo-principal-escrito-titulo{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 48px;
+        border-top: 1.4px solid #4046C0;
+    }
+    .conteudo-principal-escrito-botao{
+        display: none;
     }
 }
