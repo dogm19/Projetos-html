@@ -1,0 +1,40 @@
+/* Reset de Estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilo Geral */
+body {
+  overflow: hidden;
+  background-color: #1e1e1f;
+  color: #dddddd;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+/* Estilo do Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+.logo h1 {
+  margin: 0 40px;
+}
+
+/* Estilo do Principal */
+main {
+  padding: 20px;
+}
+/* Estilo do Rodapé */
+footer {
+  background-color: #2e2c2c28;
+  color: #ddd;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
