@@ -1,0 +1,29 @@
+#redes-sociais {
+  width: 100%;
+  padding-left: 50px;
+}
+
+#redes-sociais a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+  font-size: 24px;
+  color: #ddd;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#redes-sociais a:hover {
+  color: #ddd;
+  border: 1px solid #ddd;
+  background-color: #007bff;
+}
+
+#redes-sociais a i {
+  line-height: 1;
+}

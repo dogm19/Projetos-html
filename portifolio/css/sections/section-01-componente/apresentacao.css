@@ -1,0 +1,27 @@
+#apresentacao {
+  width: 100%;
+  height: 30rem;
+  color: #dddddd;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+.texto {
+  flex: 1;
+}
+#apresentacao h4 {
+  font-size: 18px;
+  color: #3849a7;
+}
+
+#apresentacao h1 {
+  font-size: 24px;
+  color: #494848;
+  margin-bottom: 10px;
+}
+
+#apresentacao p {
+  font-size: 16px;
+  color: #666;
+}

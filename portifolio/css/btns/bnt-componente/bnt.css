@@ -1,0 +1,32 @@
+button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, border 0.4s ease;
+}
+
+.contrate-btn {
+  border: 1px solid #3849a7;
+  background-color: #3849a7;
+  color: #ddd;
+}
+
+.contrate-btn:hover {
+  border: 1px solid #ddd;
+  background-color: #273585;
+  color: #ddd;
+}
+
+.cv-btn {
+  border: 1px solid #28a745;
+  background: none;
+  color: #28a745;
+}
+.cv-btn:hover {
+  border: 1px solid #ddd;
+  background-color: #28a745;
+  color: #ddd;
+}
