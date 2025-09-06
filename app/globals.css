@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Império Maker Brand Colors */
+  --background: #2c3e50; /* Fundo azul escuro da logo */
+  --foreground: #ffffff; /* Texto primário branco */
+  --card: #34495e; /* Cartões ligeiramente mais claros que o fundo */
+  --card-foreground: #ffffff; /* Texto dos cartões */
+  --popover: #34495e; /* Popovers */
+  --popover-foreground: #ffffff; /* Texto dos popovers */
+  --primary: #c0392b; /* Vermelho bordô do cubo da logo */
+  --primary-foreground: #ffffff; /* Texto branco em CTAs vermelhos */
+  --secondary: #f1c40f; /* Amarelo dourado da coroa */
+  --secondary-foreground: #2c3e50; /* Texto escuro em fundo amarelo */
+  --muted: #7f8c8d; /* Texto menos importante */
+  --muted-foreground: #bdc3c7; /* Texto secundário */
+  --accent: #f1c40f; /* Amarelo dourado para ícones e destaques */
+  --accent-foreground: #2c3e50; /* Texto em elementos amarelos */
+  --destructive: #c0392b; /* Vermelho bordô para erros */
+  --destructive-foreground: #ffffff; /* Texto de erro */
+  --border: #34495e; /* Bordas sutis */
+  --input: #34495e; /* Campos de entrada */
+  --ring: rgba(192, 57, 43, 0.5); /* Animação de foco vermelha */
+  --chart-1: #c0392b;
+  --chart-2: #f1c40f;
+  --chart-3: #7f8c8d;
+  --chart-4: #34495e;
+  --chart-5: #2c3e50;
+  --radius: 0.5rem;
+  --sidebar: #2c3e50;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c0392b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1c40f;
+  --sidebar-accent-foreground: #2c3e50;
+  --sidebar-border: #34495e;
+  --sidebar-ring: rgba(192, 57, 43, 0.5);
+}
+
+.dark {
+  /* Mantém as mesmas cores para modo escuro */
+  --background: #2c3e50;
+  --foreground: #ffffff;
+  --card: #34495e;
+  --card-foreground: #ffffff;
+  --popover: #34495e;
+  --popover-foreground: #ffffff;
+  --primary: #c0392b;
+  --primary-foreground: #ffffff;
+  --secondary: #f1c40f;
+  --secondary-foreground: #2c3e50;
+  --muted: #7f8c8d;
+  --muted-foreground: #bdc3c7;
+  --accent: #f1c40f;
+  --accent-foreground: #2c3e50;
+  --destructive: #c0392b;
+  --destructive-foreground: #ffffff;
+  --border: #34495e;
+  --input: #34495e;
+  --ring: rgba(192, 57, 43, 0.5);
+  --chart-1: #c0392b;
+  --chart-2: #f1c40f;
+  --chart-3: #7f8c8d;
+  --chart-4: #34495e;
+  --chart-5: #2c3e50;
+  --sidebar: #2c3e50;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c0392b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1c40f;
+  --sidebar-accent-foreground: #2c3e50;
+  --sidebar-border: #34495e;
+  --sidebar-ring: rgba(192, 57, 43, 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* Adicionado breakpoint extra small para telas muito pequenas */
+  --breakpoint-xs: 475px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  /* Adicionado breakpoint xs personalizado */
+  --breakpoint-xs: 475px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    /* Melhorado overflow para evitar scroll horizontal */
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Prevenção de scroll horizontal */
+    overflow-x: hidden;
+  }
+
+  /* Adicionado breakpoint xs personalizado */
+  @media (min-width: 475px) {
+    .xs\:block {
+      display: block;
+    }
+    .xs\:inline {
+      display: inline;
+    }
+    .xs\:flex {
+      display: flex;
+    }
+    .xs\:grid {
+      display: grid;
+    }
+    .xs\:hidden {
+      display: none;
+    }
+    .xs\:w-auto {
+      width: auto;
+    }
+    .xs\:text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+    .xs\:flex-row {
+      flex-direction: row;
+    }
+    .xs\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .xs\:col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+  }
+}
+
+/* Animações customizadas */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    /* Ajustando glow para o amarelo dourado da logo */
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(241, 196, 15, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Adicionado animação de entrada suave */
+@keyframes slide-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-top-2 {
+  animation-name: slide-in-from-top;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
