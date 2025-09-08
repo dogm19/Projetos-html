@@ -54,7 +54,7 @@ export function HeroSection() {
               size="lg"
               onClick={() =>
                 window.open(
-                  "https://wa.me/557799052700?text=Olá,%20tudo%20bem?%20Gostaria%20de%20fazer%20um%20orçamento%20com%20vocês.",
+                  "https://wa.me/5577998600597?text=Olá,%20tudo%20bem?%20Gostaria%20de%20fazer%20um%20orçamento%20com%20vocês.",
                   "_blank"
                 )
               }
